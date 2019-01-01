@@ -1,10 +1,16 @@
 var express =require("express");
 
-var burger=require("./models/burger.js");
+var router =express.router();
 
-var app=express();
+var burger=require("../models/burger.js");
 
-app.get("/", function (req, res) {
-    connection
+router.get("/", function(req,res) {
+    burger.showAll(function(data){
+        var hbsObject = {
+            burgers: data
+        };
+        console.log(hbsObject)
+        res.render("index", hbsObject);
+    }
 
 })

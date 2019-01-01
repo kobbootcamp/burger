@@ -1,12 +1,23 @@
 var orm = require("./config/orm");
 
-orm.selectAll();
+var burger = {
+    showAll: function (cb) {
+        orm.selectAll(function (res) {
+            cb(res)
+        })
+    },
+    createNew: function (burgerName, cb) {
+        orm.insertOn(burgerName, function (res) {
+            cb(res)
+        })
+    },
+    devourIt: function (burgerName, cb) {
+        orm.UpdateOne(burgername, function (res) {
+            cb(res)
+        })
+    }
+}
 
-orm.insertOne("burgername");
-
-orm.UpdateOne("burgername");
 
 
-
-
-module.exports = 
+module.exports = burger
