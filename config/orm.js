@@ -2,7 +2,7 @@ var connection = require("./connection");
 
 var orm = {
     selectAll: function (cb) {
-        var queryString = "SELECT * FROM burgers WHERE devoured = false";
+        var queryString = "SELECT * FROM burgers";
         connection.query(queryString, function (err, result) {
             if (err) throw err;
             cb(result);
@@ -10,19 +10,19 @@ var orm = {
     },
     insertOne: function (burgername, cb) {
         var queryString = "INSERT INTO burgers SET ?";
-        connection.query(queryString, { burger_name: burgername, devoured: false }, function (err, result) {
+        connection.query(queryString, { burger_name: burgername}, function (err, result) {
             if (err) throw err;
-            console.log(result);
+            // console.log(result);
             cb(result);
         });
     },
-    UpdateOne: function (burgername, cb) {
+    UpdateOne: function (burgerid, cb) {
         var queryString =
-            "UPDATE burgers SET devoured = true WHERE burger_name = ?";
+            "UPDATE burgers SET devoured = true WHERE ?";
 
-        connection.query(queryString,{ burger_name: burgername}, function (err, result) {
+        connection.query(queryString,{id: burgerid}, function (err, result) {
                 if (err) throw err;
-                console.log(result);
+                // console.log(result);
                 cb(result);
             }
         );

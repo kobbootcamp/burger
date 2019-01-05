@@ -7,12 +7,12 @@ var burger = {
         })
     },
     createNew: function (burgerName, cb) {
-        orm.insertOn(burgerName, function (res) {
+        orm.insertOne(burgerName, function (res) {
             cb(res)
         })
     },
-    devourIt: function (burgerName, cb) {
-        orm.UpdateOne(burgername, function (res) {
+    devourIt: function (burgerId, cb) {
+        orm.UpdateOne(burgerId, function (res) {
             cb(res)
         })
     }
