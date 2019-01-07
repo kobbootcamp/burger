@@ -1,15 +1,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            available
+            <div class="dadHands">READY TO EAT</div>
+            
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <div id="burgerBox">
+                <div class="burgerBox">
                     {{burger_name}}
-                    <button class="devourIt" data-id="{{id}}" data-devoured="{{devoured}}">
-                        Devour it!
+                    <button class="devourIt btn" data-id="{{id}}" data-devoured="{{devoured}}">DEVOUR IT!
                     </button>
+
                 </div>
 
                 {{/unless}}
@@ -21,12 +22,12 @@
 
         <div class="col-md-6">
 
-            devoured
+            <div class="dadHands">DEVOURED</div>
 
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
-                <div id="emptyPlate">
+                <div class="emptyPlate">
                     {{burger_name}}
                 </div>
 
@@ -39,19 +40,23 @@
     </div>
 
     <div class="row">
-        <div class="col-md-12" <h2>Add a Burger</h2>
+        <div class="col-md-12" id="orderTitle" <h2>Order a Burger</h2>
             <form class="create-form">
 
-                <div class="form-group">
-                    <label for="newBurger">Name of burger:</label>
+                <div class="form-group" id="newburgerbox">
+                    <label id="namelabel" for="newBurger">Name of burger:</label>
                     <input type="text" id="newBurger" name="name">
                 </div>
 
 
-                <button type="submit">Add Burger</button>
+                <button class="btn" type="submit">ADD BURGER</button>
             </form>
         </div>
     </div>
 
-</div>
+    <div class="row">
 
+
+    </div>
+
+</div>

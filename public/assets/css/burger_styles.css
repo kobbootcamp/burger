@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand");
+
+@font-face {
+    font-family: BobsBurgers;
+    src: url(../fonts/BobsBurgers.ttf);
+}
+
+@font-face {
+    font-family: dadHands;
+    src: url(../fonts/dadha.ttf);
+}
+
+body {
+        background-image: url("../images/background.jpg");
+    }
+
+.center {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+img {
+    padding-top: 0px;
+    padding-bottom: 50px;
+}
+
+#pageTitle {
+    text-align: center;
+    font-family: "BobsBurgers";
+    color: red;
+    font-size: 100px;
+    margin-bottom: -20px;
+}
+
+#orderTitle {
+ font-family: dadHands;
+ font-size: 50px;
+ text-align: center;
+
+}
+
+.dadHands {
+    font-family: dadHands;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom-color: lightgray;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+#newBurger {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#namelabel {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+
+
+.devourIt {
+    float:right;
+    font-family: dadHands;
+    border-width: 1px;
+    border-color: black;
+}
+
+#newburgerbox {
+margin-bottom: 0px;
+}
+
+.burgerBox {
+ height: 40px;
+}
+
+.emptyPlate {
+ text-align: center;
+}
