@@ -1,3 +1,3 @@
-# burger
+# Eat da burger
 
 This application uses MySQL, node, express.js, a home grown ORM, and handlebars. The application was constructed using the MVC approach.   The user enters a burger name in the box provided.  The application adds the burger to the database, and provides a "Devoutr It!" button.  Clicking the button updates the record in the table (devour = true) and the burger is moved to the other side of the page.
