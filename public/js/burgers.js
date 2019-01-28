@@ -31,7 +31,7 @@ $(function () {
       type: "POST",
       data: newBurger
     }).then(function () {
-      alert("Added new burger")
+      // alert("Added new burger")
       location.reload();
     })
   })
